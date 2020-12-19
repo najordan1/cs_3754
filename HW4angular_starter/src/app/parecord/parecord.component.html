@@ -1,0 +1,38 @@
+<mat-card class="parecord-card" [matTooltip]="parecord.createdBy.username">
+
+
+  <div class="date" >
+    {{parecord.createdDate | date}}
+  </div>
+
+  <div class="cost">
+    ${{parecord.cost}}
+  </div>
+
+  <div class="name">
+    {{parecord.name}}<br>
+    {{parecord.createdBy.username}}
+  </div>
+
+  <mat-icon class="type">{{category}}</mat-icon>
+
+
+
+<div class="menu">
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Delete or edit">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="edit()">
+      <mat-icon>edit</mat-icon>
+      <span>Edit</span>
+    </button>
+       <button mat-menu-item (click)="delete(parecord.createdDate)">
+      <mat-icon>delete</mat-icon>
+      <span>Delete</span>
+    </button>
+  </mat-menu>
+  </div>
+
+  <!---->
+</mat-card>

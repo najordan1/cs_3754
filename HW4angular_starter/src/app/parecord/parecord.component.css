@@ -1,0 +1,39 @@
+.date {
+  grid-area: date;
+}
+.menu{
+
+  grid-area: menu;
+  justify-self: end;
+  align-self: start;
+}
+
+.type{
+
+  grid-area: type;
+  height:48px !important;
+  width:48px !important;
+  font-size:48px !important;}
+
+.cost{
+  grid-area: cost;
+  font-size:28px !important;
+  color: #ff4081
+}
+
+.name{
+  grid-area: name;
+}
+
+.parecord-card {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  grid-template-rows: 75px;
+  grid-template-areas:
+    "date date date type menu"
+
+    "name name name name cost";
+}
+
+
+

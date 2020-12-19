@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-content>
+    <div class="rank-card">
+
+      <div class="avatar" [matTooltip]="rank.firstName+ ' '+rank.lastName">
+        <igx-avatar initials={{this.initials}} roundShape="true" size="medium" bgColor="{{color}}"></igx-avatar>
+        {{rank.username}}
+      </div>
+
+      <div class="info">
+
+        Total spent: ${{rank.totalSpent}}<br>
+        Purchases: {{rank.numTransactions}}<br>
+        {{owed}}
+
+      </div>
+
+
+    </div>
+  </mat-card-content>
+</mat-card>

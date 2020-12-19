@@ -1,0 +1,54 @@
+<mat-card>
+
+  <mat-card-header>
+    <mat-card-title>Edit Your Payment!</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>Expense Name</mat-label>
+        <input matInput type="text" placeholder="Ex. Pizza" maxlength="20" [(ngModel)]="name">
+        <mat-hint align="end">{{name.length}} / 20</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>Choose Payment Date</mat-label>
+        <input matInput [matDatepicker]="picker" [value]="date" disabled="T">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>Cost</mat-label>
+        <input matInput type="number" min="0" max="3000" [(ngModel)]="cost">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-slider thumbLabel min="0" max="3000" [(ngModel)]="cost"></mat-slider>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>Select Payment Category</mat-label>
+        <mat-select  [(value)]="category">
+          <mat-option value=0>Rent</mat-option>
+          <mat-option value=1>Utilities</mat-option>
+          <mat-option value=2>Food</mat-option>
+          <mat-option value=3>Transportation</mat-option>
+          <mat-option value=4>House Needs</mat-option>
+          <mat-option value=5>Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <button mat-button color="accent" routerLink="/" (click)="updatePARecord()">Save</button>
+    </div>
+  </mat-card-content>
+</mat-card>

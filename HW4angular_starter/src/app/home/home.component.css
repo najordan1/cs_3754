@@ -1,0 +1,29 @@
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items#Making_things_wrap*/
+
+
+
+.pa-record-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(305px, 1fr));
+
+}
+
+
+.card-item{
+  flex: 1;
+  padding: 3px 3px 3px 3px;
+  width:300px;
+
+}
+
+.fab-container {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+

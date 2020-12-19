@@ -1,0 +1,14 @@
+<div class="pa-record-container">
+
+  <parecord-component class="card-item" *ngFor="let parecord of userPARecords" [parecord]="parecord" (deleteEvent) = "deletePARecord($event)">
+  </parecord-component>
+
+</div>
+
+
+
+<div class="fab-container">
+  <button mat-flat-button color="primary"  matTooltip="Add new expense" routerLink="/create">
+    <i class="material-icons">add</i>
+  </button>
+</div>

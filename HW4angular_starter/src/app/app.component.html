@@ -1,0 +1,13 @@
+<mat-toolbar *ngIf="isUser">
+  <igx-avatar initials={{this.initials}} roundShape="true" size="small" bgColor="#ff4081"></igx-avatar>
+  <button mat-button routerLink="/">Expenses</button>
+  <button mat-button routerLink="/settleup">Settle Up</button>
+  <button mat-button routerLink="/settings">Change Group</button>
+  <button mat-button routerLink="/graphics">Graphics</button>
+  <button mat-button (click)="logout()">Logout </button>
+  <span class="spacer"></span>
+  <span class="title">OpenWallet</span>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>

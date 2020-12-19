@@ -1,0 +1,9 @@
+<div class="payment-container">
+  <rank-component class="card-item" *ngFor="let rank of ranks" [rank] = "rank" ></rank-component>
+</div>
+
+<div class="settle">
+  <button mat-flat-button color="accent" (click)="openDialog()">
+    Settle Up!
+  </button>
+</div>

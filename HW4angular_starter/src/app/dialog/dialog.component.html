@@ -1,0 +1,9 @@
+<h5 mat-dialog-title>All settled up</h5>
+<br>
+<mat-dialog-content class="mat-typography">
+  Are you sure? This action deletes all payments for you group and cannot be undone.
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" (click)="delete()" routerLink="/">Settled Up</button>
+</mat-dialog-actions>
